@@ -1,0 +1,155 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+/* navbar */
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222 !important;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info{
+    display: flex;
+    flex-wrap: wrap;
+    height: 8rem;
+    background-color: #ebebeb;
+    justify-content: center;
+    align-content: space-evenly;
+    text-align: center;
+    
+}
+
+.f-info-links , .f-info-socials, .f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* footer{
+    position: bottom;
+} */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    flex: 1;
+
+}
+
+/* footer {
+    margin-top: auto;
+} */
+
+/* cards */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+    cursor: pointer !important;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding-left: 0 !important;
+}
+.listing-link{
+    text-decoration: none;
+}
+
+/* card effect */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color: white;
+}
+
+/* new page */
+/* add button */
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* show page */
+.show-img{
+    height: 30vh;
+}
+.btns{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* review card */
+.review-card-subtitle{
+    display: flex;
+    justify-content: space-between;
+}
+.delete-review-i{
+    border: none!important;
+    font-size: 20px !important;
+    background: transparent !important;
+}
+
+#map {
+    height: 400px;
+    width: 80vh;
+}
+
+/* custom marker of mapbox */
+.marker {
+    background-image: url('https://docs.mapbox.com/help/demos/custom-markers-gl-js/mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Search option in Navbar */
+.search-bar{
+    background-color: white;
+
+}
+.search-btn i{
+    display: inline !important;
+    margin-right: 0.5rem !important;
+}
+.search-btn{
+    background-color: #fe424d !important;
+    color: #fff !important;
+    border-radius: 25px !important;
+    padding: 0 1rem 0 1rem !important;
+}
+.search-input{
+    border-radius: 25px !important;
+    padding: 0.5rem 3rem 0.5rem 3rem !important;
+}
