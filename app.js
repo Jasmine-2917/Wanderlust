@@ -85,10 +85,6 @@ app.use((req,res,next)=>{
     next();
 });
 
-app.get('/',(req,res)=>{
-    console.log(res.locals);
-})
-
 //for listings
 app.use("/listings",listingsRoute);
 //for reviews
