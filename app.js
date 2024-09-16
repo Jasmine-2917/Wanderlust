@@ -50,7 +50,7 @@ main().then(()=>{
     console.log("connected to DB");
 })
 .catch((err)=>{
-    console.logn(err);
+    console.log(err);
 });
 
 async function main(){
