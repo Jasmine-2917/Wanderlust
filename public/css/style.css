@@ -119,6 +119,7 @@ body {
     background: transparent !important;
 }
 
+/* Map Styling */
 #map {
     height: 400px;
     width: 80vh;
