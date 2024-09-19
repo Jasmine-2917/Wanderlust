@@ -15,13 +15,17 @@
         alt="listing_image"
       />
       <div class="card-body">
-        <p class="card-text">Owned by - <i><%= listing.owner.username %></i></p>
-        <p class="card-text"><%= listing.description %></p>
         <p class="card-text">
-          &#x20B9;<%= listing.price.toLocaleString("en-IN") %>
+          <b>Owned by - <i><%= listing.owner.username %></i></b>
         </p>
-        <p class="card-text"><%= listing.location %></p>
-        <p class="card-text"><%= listing.country %></p>
+        <p class="card-text">
+          <h4><b>About this Space</b></h4><%= listing.description %>
+        </p>
+        <p class="card-text">
+          <i>&#x20B9;<%= listing.price.toLocaleString("en-IN") %> night</i>
+        </p>
+        <p class="card-text"><%= listing.country %>, <%= listing.location %></p>
+        <p class="card-text"><%= listing.category %></p>
       </div>
     </div>
     <% if(currUser && currUser._id.equals(listing.owner._id)){%>
@@ -121,9 +125,7 @@
       <% for(review of listing.reviews) { %>
       <div class="card col-5 mb-3 ms-3">
         <div class="card-body">
-          <div
-            class="card-subtitle mb-2 text-body-secondary review-card-subtitle"
-          >
+          <div class="card-subtitle mb-2 text-body-secondary review-card-subtitle">
             <div>
               <h5 class="card-title">@<%= review.author.username %></h5>
               <p
@@ -133,7 +135,6 @@
                 <%= review.rating %>
               </p>
             </div>
-
             <div>
               <form
                 method="POST"

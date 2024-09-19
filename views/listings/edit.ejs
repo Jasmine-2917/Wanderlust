@@ -77,19 +77,54 @@
         </div>
       </div>
       <br />
-      <div>
-        <label for="location" class="form-label">Location</label>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="category" class="form-label">Category</label>
+          <select
+            name="listing[category]"
+            id="category"
+            class="form-control"
+            required
+          >
+            <option value="<%= listing.category %>" selected="selected">
+              <%= listing.category %>
+            </option>
+            <option value="Trending">Trending</option>
+            <option value="Rooms">Rooms</option>
+            <option value="Iconic Cities">Iconic Cities</option>
+            <option value="Mountains">Mountains</option>
+            <option value="Castles">Castles</option>
+            <option value="Amazing Pools">Amazing Pools</option>
+            <option value="Camping">Camping</option>
+            <option value="Farms">Farms</option>
+            <option value="Arctic">Arctic</option>
+            <option value="Beachfront">Beachfront</option>
+            <option value="Boats">Boats</option>
+            <option value="Play">Play</option>
+            <option value="Skiing">Skiing</option>
+            <option value="Golf">Golf</option>
+            <option value="Towers">Towers</option>
+            <option value="Creative Spaces">Creative Spaces</option>
+            <option value="New">New</option>
+          </select>
+          <div class="invalid-feedback">Mention the price</div>
+        </div>
 
-        <input
-          type="text"
-          name="listing[location]"
-          value="<%= listing.location %>"
-          class="form-control"
-          required
-        />
-        <div class="valid-feedback">Location looks good!</div>
-        <div class="invalid-feedback">Fill the Location field</div>
+        <div class="col-md-8">
+          <label for="location" class="form-label">Location</label>
+
+          <input
+            type="text"
+            name="listing[location]"
+            value="<%= listing.location %>"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Location looks good!</div>
+          <div class="invalid-feedback">Fill the Location field</div>
+        </div>
       </div>
+
       <button class="btn mt-3 btn-dark mb-3 add-btn">Submit</button>
     </form>
   </div>

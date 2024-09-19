@@ -1,116 +1,137 @@
 <% layout("/layouts/boilerplate") %>
-
 <body>
+  <script>
+    const allListings = <%- JSON.stringify(allListings) %>;
+  </script>
   <div class="category">
     <swiper-container
-      class="mySwiper"
+      class="mySwiper filter-menu"
       init="false"
       loop="true"
       navigation="true"
     >
-      <swiper-slide
-        ><div class="filter">
-          <div><i class="fa-solid fa-fire"></i></div>
+      <swiper-slide>
+        <div class="filter" data-filter-property="Trending">
+          <div>
+            <i class="fa-solid fa-fire"></i>
+          </div>
           <p>Trending</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Rooms">
           <div><i class="fa-solid fa-bed"></i></div>
           <p>Rooms</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Iconic Cities">
           <div><i class="fa-solid fa-city"></i></div>
           <p>Iconic Cities</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Mountains">
           <div><i class="fa-solid fa-mountain"></i></div>
           <p>Mountains</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Castles">
           <div><i class="fa-brands fa-fort-awesome"></i></div>
           <p>Castles</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Amazing Pools">
           <div><i class="fa-solid fa-person-swimming"></i></div>
           <p>Amazing Pools</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Camping">
           <div><i class="fa-solid fa-tent"></i></div>
           <p>Camping</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Farms">
           <div><i class="fa-solid fa-cow"></i></div>
           <p>Farms</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Arctic">
           <div><i class="fa-regular fa-snowflake"></i></div>
           <p>Arctic</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Beachfront">
           <div><i class="fa-solid fa-umbrella-beach"></i></div>
           <p>Beachfront</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Boats">
           <div><i class="fa-solid fa-sailboat"></i></div>
           <p>Boats</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Play">
           <div><i class="fa-solid fa-gamepad"></i></div>
           <p>Play</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Skiing">
           <div><i class="fa-solid fa-person-skiing"></i></div>
           <p>Skiing</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Golf">
           <div><i class="fa-solid fa-golf-ball-tee"></i></div>
           <p>Golf</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Towers">
           <div><i class="fa-solid fa-tower-observation"></i></div>
           <p>Towers</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="Creative Spaces">
           <div><i class="fa-solid fa-palette"></i></div>
           <p>Creative Spaces</p>
-        </div></swiper-slide
-      >
-      <swiper-slide
-        ><div class="filter">
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="filter" data-filter-property="New">
           <div><i class="fa-solid fa-key"></i></div>
           <p>New</p>
-        </div></swiper-slide
-      >
+        </div>
+      </swiper-slide>
     </swiper-container>
+
     <div class="tax-toggle">
       <div class="form-check-reverse form-switch">
         <input
@@ -128,8 +149,12 @@
 
   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1 mt-3">
     <% for(let listing of allListings){ %>
-    <a href="/listings/<%= listing._id %>" class="listing-link">
-      <div class="card col" style="border: none">
+    <a href="/listings/<%= listing._id %>" class="listing-link listing-item">
+      <div
+        class="listing-card card col"
+        style="border: none"
+        data-property="<%= listing.category %>"
+      >
         <img
           src="<%= listing.image.url %>"
           class="card-img-top"
@@ -149,4 +174,6 @@
 
     <% } %>
   </div>
+
+  <script src="/js/filter.js"></script>
 </body>

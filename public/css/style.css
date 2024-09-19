@@ -154,3 +154,8 @@ body {
     border-radius: 25px !important;
     padding: 0.5rem 3rem 0.5rem 3rem !important;
 }
+
+/* filter icon */
+.hidden {
+    display: none;
+}
