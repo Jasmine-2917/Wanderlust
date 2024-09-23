@@ -18,9 +18,6 @@ const User = require("./models/user.js");
 const listingsRoute = require("./routes/listing.js");
 const reviewsRoute = require("./routes/review.js");
 const userRoute = require("./routes/user.js");
-// const favicon = require('serve-favicon')
-
-// app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')))
 
 const dbUrl = process.env.ATLASDB_URL;
 
