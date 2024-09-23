@@ -15,10 +15,12 @@ const MongoStore = require("connect-mongo");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
-const { serialize } = require("v8");
 const listingsRoute = require("./routes/listing.js");
 const reviewsRoute = require("./routes/review.js");
 const userRoute = require("./routes/user.js");
+// const favicon = require('serve-favicon')
+
+// app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')))
 
 const dbUrl = process.env.ATLASDB_URL;
 

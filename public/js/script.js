@@ -16,3 +16,8 @@
     }, false)
   })
 })()
+
+//flash message - alerts
+setTimeout(function() {
+    document.querySelector('.alert-success').remove();
+}, 3000);

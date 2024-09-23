@@ -1,23 +1,4 @@
 
-
-// let filterItems = document.querySelectorAll('.filter-icon');
-//         filterItems.forEach(item => {
-//           item.addEventListener('click', function (e) {
-//             e.preventDefault();
-//             let category = this.getAttribute('data-category');
-//             let allListings = document.querySelectorAll('.listing-item');
-
-//             allListings.forEach(listing => {
-//               if (category === 'trending' || listing.classList.contains(category)) {
-//                 listing.classList.remove('hidden');
-//               } else {
-//                 listing.classList.add('hidden');
-//               }
-//             });
-//           });
-//         });
-
-
 // Get all filter elements
 const filterElements = document.querySelectorAll(".filter");
 const listingCards = document.querySelectorAll(".listing-card");
