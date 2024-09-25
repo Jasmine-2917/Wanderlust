@@ -1,56 +1,93 @@
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/listings"
-      ><i class="fa-regular fa-compass"></i
-    ></a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavAltMarkup"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link" href="/listings">Explore</a>
-      </div>
-      <!-- <div class="navbar-nav ms-auto">
-        <form class="d-flex" role="search" id="search-form">
-          <input
-            class="form-control me-2 search-input"
-            type="search"
-            id="navbar-search-input"
-            placeholder="Search destinations"
-          />
-          <button class="btn search-btn" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>Search
-          </button>
-        </form>
-      </div> -->
-      <div class="navbar-nav ms-auto">
-        <form class="d-flex" id="search-form" role="search">
-          <input
-            class="form-control me-2 search-input"
-            type="search"
-            id="navbar-search-input"
-            placeholder="Search destinations"
-          />
-          <button class="btn search-btn" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>Search
-          </button>
-        </form>
-      </div>
+<div class="extended-navbar">
+  <nav class="navbar navbar-expand-sm bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"
+        ><i class="fa-regular fa-compass"></i
+      ></a>
 
-      <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="/listings/new">Airbnb your home</a>
-        <% if(!currUser){ %>
-        <a class="nav-link" href="/signup"><b>Sign Up</b></a>
-        <a class="nav-link" href="/login"><b>Login</b></a>
-        <% } %> <% if(currUser){ %>
-        <a class="nav-link" href="/logout"><b>Logout</b></a>
-        <% } %>
+      <div class="navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/listings">Explore</a>
+        </div>
+
+        <div class="navbar-nav ms-auto" id="search-listing">
+          <form class="d-flex" id="search-form" role="search">
+            <input
+              class="form-control me-2 search-input"
+              type="search"
+              id="navbar-search-input"
+              placeholder="Search destinations"
+            />
+            <button class="btn search-btn" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>Search
+            </button>
+          </form>
+        </div>
+
+        <div id="login-logout" class="d-flex flex-wrap ms-auto">
+          <% if(currUser){ %>
+          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+          <% } %> <%if(!currUser){ %>
+          <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+          <a class="nav-link" href="/login"><b>Login</b></a>
+          <% } %> <% if(currUser){ %>
+          <a class="nav-link" href="/logout"><b>Logout</b></a>
+          <% } %>
+        </div>
       </div>
     </div>
+  </nav>
+  <!-- <div class="menu-btn-container py-3 px-3">
+    <div class="dropdown">
+      <button
+        type="button"
+        id="menu-btn"
+        class="form-control dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        
+      >
+        <span class="material-symbols-outlined"> menu </span>
+      </button>
+      <ul class="dropdown-menu"></ul>
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+      </div>
+    </div> -->
+
+  <div class="side-bar-container">
+    <div class="dropdown">
+      <button
+        class="btn menu-btn"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        style="border: 1px solid #b4b2b2"
+      >
+        <span class="material-symbols-outlined"> menu </span>
+      </button>
+      <ul class="dropdown-menu">
+        <% if(currUser){ %>
+        <li>
+          <a class="dropdown-item" href="/listings/new">Airbnb your home</a> <%
+          } %> <%if(!currUser){ %>
+        </li>
+
+        <li>
+          <a class="dropdown-item" href="/signup"><b>Sign Up</b></a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="/login"><b>Login</b></a> <% } %> <%
+          if(currUser){ %>
+        </li>
+
+        <li>
+          <a class="dropdown-item" href="/logout"><b>Logout</b></a>
+          <% } %>
+        </li>
+      </ul>
+    </div>
   </div>
-</nav>
+</div>

@@ -1,0 +1,102 @@
+.short-tax-button {
+    display: none;
+    border: 1px solid grey;
+}
+
+@media (max-width: 991.98px) {
+    .short-tax-button {
+        display: block;
+    }
+}
+
+@media (max-width: 352px) {
+    .short-tax-button{
+        display: none;
+    }
+}
+
+.long-tax-button{
+    display: block;
+}
+@media (max-width: 991.98px) {
+.long-tax-button {
+        display: none;
+    }
+}
+
+.navbar-nav a{
+    display: block;
+}
+@media (max-width: 991.98px) {
+    .navbar-nav a{
+        display: none;
+    }
+}
+
+#search-listing{
+    display: block ;
+}
+@media (max-width: 767.98px) {
+    #search-listing{
+        display: block ;
+    }
+}
+
+#login-logout{
+    display: block;
+    padding: 1rem;
+    width:250px;
+}
+@media (max-width: 575.98px){
+    #login-logout{
+        display: none !important;
+    }
+}
+@media (max-width: 767.98px) {
+    #login-logout {
+        width: 200px;
+    }
+}
+
+#search-listing{
+    display: block;
+}
+@media (max-width: 575.98px) {
+    #search-listing{
+        
+        margin-top: -2.7rem;
+        margin-left: 3rem !important;
+    }
+}
+@media (max-width: 484px) {
+    #search-listing {
+    
+        margin-top: -2.7rem;
+        margin-left: 3rem !important;
+    }
+}
+
+.extended-navbar{
+    display:flex;
+}
+.navbar{
+    width: 100%;
+}
+.side-bar-container{
+    display: none;
+}
+@media (max-width: 575.98px) {
+    .side-bar-container{
+        display: block;
+        border-bottom: 1px solid #EBEBEB;
+        cursor: pointer;
+    }
+}
+
+.menu-btn{
+    border: 4px solid black;
+    margin-top: 2.2rem;
+}
+.menu-btn:hover{
+    box-shadow: 5px 5px 10px 2px rgba(214, 212, 212, 0.8);
+}

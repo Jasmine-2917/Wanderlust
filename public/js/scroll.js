@@ -24,7 +24,8 @@ const swiperEl = document.querySelector('swiper-container')
 
     swiperEl.initialize();
 
-  let toggleTax = document.getElementById("flexSwitchCheckDefault");
+  let AlltoggleTax = document.querySelectorAll("#flexSwitchCheckDefault")
+  AlltoggleTax.forEach((toggleTax) => {
   toggleTax.addEventListener("click",()=>{
     let taxinfo = document.getElementsByClassName("tax-info");
     for(info of taxinfo){
@@ -34,7 +35,8 @@ const swiperEl = document.querySelector('swiper-container')
         info.style.display = "none";
       }
     }
-  });
+  })
+});
 
 
 
